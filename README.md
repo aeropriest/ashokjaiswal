@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ashok Jaiswal · Portfolio
 
-## Getting Started
+Static Next.js site (App Router, Tailwind v4, framer-motion) listing crypto/Web3 work, founded products,
+AI apps and enterprise roles. All content lives in `src/data/projects.ts`; images in `public/images`.
 
-First, run the development server:
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build (static export → `out/`)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
 
-## Learn More
+Pushes to `main` run `.github/workflows/deploy.yml`, which builds the static export and publishes it to
+GitHub Pages. For a user site (`aeropriest.github.io`) no base path is needed. For a project page set a
+repository variable `NEXT_PUBLIC_BASE_PATH=/<repo-name>`.
 
-To learn more about Next.js, take a look at the following resources:
+## Modes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The header toggle switches between **Interactive** (animated cards, tag filters, gallery lightbox) and
+**Simple** (plain stacked list, print-friendly). The choice and the light/dark theme persist in `localStorage`.
