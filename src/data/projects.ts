@@ -172,6 +172,22 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "coinstack",
+    facets: ["crypto", "saas"],
+    title: "CoinStack",
+    tagline: "Every wallet, every chain, one portfolio",
+    category: "crypto",
+    period: "2023 – 2024",
+    role: "Product & lead developer",
+    org: "Axar Soft",
+    tags: ["Next.js", "Moralis APIs", "Multi-chain", "Wallets", "Transactions"],
+    description:
+      "A portfolio dashboard that connects any number of wallets and shows tokens, coins and full transaction history either consolidated or wallet by wallet, powered by Moralis APIs. Total worth, per-asset change and price, analytics, and send, receive, earn, buy and swap entry points, with a dark theme built for long sessions.",
+    cover: "/images/coinstack-dashboard.webp",
+    gallery: ["/images/coinstack-dashboard.webp"],
+    links: [{ label: "GitHub · JaisWallet", href: "https://github.com/aeropriest/JaisWallet" }],
+  },
+  {
     slug: "axarnft",
     facets: ["crypto", "ai", "saas"],
     title: "Axar NFT",
@@ -210,6 +226,7 @@ export const projects: Project[] = [
       { label: "xorro.io", href: "https://xorro.io/" },
       { label: "New Social Theory", href: "https://www.newsocialtheory.com/" },
     ],
+    featured: true,
   },
   {
     slug: "biddify",
@@ -233,13 +250,13 @@ export const projects: Project[] = [
     portrait: true,
     facets: ["mobile", "saas"],
     title: "Kyozo",
-    tagline: "Community platform for creatives, from a Flutter app to an API-first backend",
+    tagline: "Community SaaS for creatives: iOS/Android app, web at kyozo.com, API-first backend",
     category: "products",
     period: "2025 – present",
     role: "Head of product & engineering (solo builder)",
     org: "Kyozo, Hong Kong",
     status: "Live on the App Store",
-    tags: ["Flutter", "Next.js", "Firebase", "REST API + MCP", "App Clip", "NFC"],
+    tags: ["Flutter", "iOS + Android", "Next.js", "SaaS", "Firebase", "REST API + MCP", "App Clip", "NFC"],
     description:
       "Kyozo helps DJs, labels and cultural organisers run their communities. Members discover and join communities, see upcoming events and keep one inbox; organisers switch to Pro mode for audience, tags, feed, broadcasts and messaging. I built the whole stack: the Flutter iOS/Android app, the web experiences at kyozo.com, and KyozoLoop, an API-first platform with scoped keys, OpenAPI docs and an MCP server so AI agents can manage communities too.",
     highlights: [
@@ -254,6 +271,7 @@ export const projects: Project[] = [
       "/images/kyozo-ss-pro.webp",
       "/images/kyozo-ss-studio.webp",
       "/images/kyozo-ss-audience.webp",
+      "/images/kyozo-web-2026.webp",
       "/images/kyozo-willer.webp",
       "/images/kyozo-space.webp",
     ],
@@ -437,7 +455,7 @@ export const projects: Project[] = [
     role: "Founder & builder",
     org: "FlowSports",
     status: "TestFlight",
-    tags: ["SwiftUI", "On-device audio ML", "Flutter", "Kotlin", "Firebase"],
+    tags: ["iOS + Android", "SwiftUI", "On-device audio ML", "Flutter", "Kotlin", "Firebase"],
     description:
       "Mount a phone courtside, play, and get back only your shots in slow motion. Strikes are detected from audio on the device, dead time is cut, and pose-based drills score your form. FlowTennis is native iOS; a pure-JVM Kotlin engine ports the detection to Android; FlowPickle brings the same to pickleball in Flutter.",
     cover: "/images/flowtennis-ss-session.webp",
@@ -481,21 +499,6 @@ export const projects: Project[] = [
     links: [{ label: "FamilyGPT post", href: "https://x.com/jaiswalashok" }],
   },
   {
-    slug: "profile-pitch",
-    facets: ["ai", "saas"],
-    title: "Profile Pitch Pro",
-    tagline: "LLM-generated lawyer pitch profiles for a top HK law firm",
-    category: "ai",
-    period: "2023",
-    role: "Product & lead developer",
-    org: "Axar Soft",
-    tags: ["GPT", "Web scraping", "Next.js"],
-    description:
-      "Marketing needed tailor-made pitch profiles for each deal. The tool scrapes a competing lawyer's public profile, extracts differentiating factors and keywords with GPT, then rewrites the firm's own lawyer profile to match the brief, with cost tracking per generation.",
-    cover: "/images/profile-pitch-1.webp",
-    gallery: ["/images/profile-pitch-1.webp", "/images/profile-pitch-2.webp"],
-  },
-  {
     slug: "mettaa",
     facets: ["ai", "mobile"],
     title: "SuperKidz & Mettaa Games",
@@ -514,22 +517,6 @@ export const projects: Project[] = [
       { label: "SuperKidz on App Store", href: "https://apps.apple.com/hk/app/superkidz-education-mini-games/id1613737876?l=en-GB" },
       { label: "GitHub · FitnessAssistant", href: "https://github.com/aeropriest/FitnessAssistant" },
     ],
-  },
-  {
-    slug: "kidschat",
-    facets: ["ai", "saas"],
-    title: "Context-aware reading companion",
-    tagline: "Kids ask questions, the answers stay inside the book they're reading",
-    category: "ai",
-    period: "2023 – 2024",
-    role: "Builder",
-    org: "Axar Soft",
-    tags: ["RAG", "LLM", "Voice", "Next.js"],
-    description:
-      "Pick a book from the shelf, ask anything by voice or text, and the model answers only from that text, admitting when something isn't in it. A proof of concept for a multilingual, context-aware educational IoT toy for children. The same RAG stack powers askasok.chat, a document assistant for SOPs and business documentation.",
-    cover: "/images/familygpt-books-chat.webp",
-    gallery: ["/images/familygpt-books-chat.webp", "/images/askasok.webp"],
-    links: [{ label: "GitHub · askasok", href: "https://github.com/aeropriest/askasok" }],
   },
   {
     slug: "faceflow",
@@ -590,34 +577,6 @@ export const projects: Project[] = [
 
   // ───────────────────────────── ENTERPRISE ─────────────────────────────
   {
-    slug: "cathay",
-    facets: ["ai"],
-    title: "Cathay Pacific",
-    tagline: "AI-powered parts maintenance for a fleet of 200+ aircraft",
-    category: "enterprise",
-    period: "Oct 2022 – Mar 2023",
-    role: "Technical Product Manager",
-    org: "Cathay Pacific, Hong Kong",
-    tags: ["AI", "Aviation", "Enterprise", "Agile"],
-    description:
-      "Conceptualised and drove an AI-assisted parts maintenance system, working with aeronautical and technical teams to understand their maintenance challenges and running sprint planning across departments.",
-    accent: "from-emerald-500/30 via-teal-500/20 to-cyan-600/30",
-  },
-  {
-    slug: "goldman",
-    facets: [],
-    title: "Goldman Sachs",
-    tagline: "Video-conferencing platform for 30,000 employees",
-    category: "enterprise",
-    period: "Jun 2012 – May 2015",
-    role: "Product Analyst, Technology",
-    org: "Goldman Sachs, Hong Kong",
-    tags: ["Enterprise", "Unified communications", "Operations"],
-    description:
-      "Introduced a unified dial-in number across 800+ video-conferencing facilities, saving an estimated 20,000 hours a year across two million calls in six months. Led construction of three new facilities at 25% lower cost and rolled out remote monitoring for 300 rooms, saving over $2M a year in operating costs.",
-    accent: "from-sky-500/30 via-indigo-500/20 to-blue-700/30",
-  },
-  {
     slug: "early",
     facets: [],
     title: "Early years: multimedia & Win32",
@@ -632,6 +591,7 @@ export const projects: Project[] = [
     cover: "/images/albumviewer.webp",
     gallery: ["/images/albumviewer.webp", "/images/codeproject-articles.webp"],
     links: [{ label: "CodeProject", href: "https://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=31299" }],
+    featured: true,
   },
 ];
 
@@ -653,19 +613,18 @@ export const categories: { id: Category; label: string; blurb: string }[] = [
   },
   {
     id: "enterprise",
-    label: "Enterprise & early career",
-    blurb: "Aviation, investment banking and the multimedia years before that.",
+    label: "Early career",
+    blurb: "The multimedia and Win32 years, before the MBA and the startups.",
   },
 ];
 
 export const timeline = [
   { year: "2026", text: "FlowTennis, FleetClub, Kyozo 1.3, PawMe trademark, Orbie V3" },
   { year: "2025", text: "Kyozo platform from zero; PawMe launches; Xorro Web3 lead; OpenPaw robot V1 → V2; Axar NFT" },
-  { year: "2023 – 24", text: "Axar Soft: LLM products for travel, legal and retail clients; FamilyGPT" },
-  { year: "2022", text: "Cathay Pacific AI maintenance; CoinWatch, SuperKidz" },
+  { year: "2023 – 24", text: "Axar Soft: CoinStack, LLM products for travel and retail clients, FamilyGPT" },
+  { year: "2022", text: "CoinWatch, SuperKidz, Virtual Fitness Assistant" },
   { year: "2020 – 22", text: "RioDeFi: RioWallet, Rio tracker, GoingApe NFT" },
   { year: "2018 – 21", text: "Lecker Labs: Yomee, CES 2019 honoree, Food-X New York" },
   { year: "2014 – 18", text: "Ezee Systems: EzeeCube on Indiegogo, Amazon Launchpad, exit" },
-  { year: "2012 – 15", text: "Goldman Sachs, Hong Kong" },
   { year: "2012", text: "MBA, Hong Kong University of Science and Technology" },
 ];
